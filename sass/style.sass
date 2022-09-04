@@ -1,0 +1,169 @@
+@import 'resets'
+@import 'variables'
+@import 'breakpoints'
+
+* 
+    font-size: 1rem
+
+html
+    font-size: $site-font-size
+    font-family: $ff-main
+
+
+
+body 
+    display: flex
+    flex-direction: column
+    align-items: center
+    height: calc(100vh - 0.1px)
+    overflow: hidden
+
+    @include desktop
+        overflow: auto
+
+    @include landscape-mobile
+        overflow: auto
+
+    .background
+        padding-top: 0.5em
+        z-index: 1
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-around
+        width: 100%
+        min-height: 28rem
+
+
+        @include desktop
+            min-height: 45vh
+            overflow: auto
+
+        @include landscape-mobile
+            min-height: 6rem
+            padding-top: 1.5em
+            align-items: flex-start
+            flex-direction: row
+            width: 90%
+
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            width: 100%
+            min-height: 35vh
+            background-image: url("../images/pattern-bg.png")
+            background-size: cover
+            z-index: -1
+
+        .title
+            color: white
+            font-weight: 500
+            font-size: 1.5rem
+            letter-spacing: 1px
+
+            @include landscape-mobile
+                width: 40%
+                align-self: center
+                font-size: 1rem
+
+        .search
+            display: flex
+            width: 88%
+            max-width: 35rem
+            justify-content: center
+            height: 3.5rem
+            border-radius: $border-radius
+
+            @include landscape-mobile
+                align-self: center
+            
+            .search-box 
+                border: none
+                outline: none
+                width: 80%
+                padding-left: 1em
+                border-top-left-radius: $border-radius
+                border-bottom-left-radius: $border-radius
+                cursor: pointer
+
+                @include desktop
+                    width: 90%
+
+            .search-btn
+                border: none
+                background-color: #0d0d0d
+                width: 20%
+                border-top-right-radius: $border-radius
+                border-bottom-right-radius: $border-radius
+                cursor: pointer
+
+                &:hover 
+                    background-color: $dark-gray
+
+                @include desktop
+                    width: 10%
+
+
+
+        .info-box 
+            display: flex
+            flex-direction: column
+            align-items: center
+            text-align: center
+            background-color: white
+            padding: 0.5em 4em
+            border-radius: $border-radius
+            width:88%
+            max-width: 60rem
+
+            @include desktop
+                padding: 0.75em 3em
+                flex-direction: row
+                justify-content: space-between
+
+            @include landscape-mobile
+                display: none
+
+            div
+                padding: 0.75em 0
+
+                @include desktop
+                    display: flex
+                    flex-direction: column
+                    padding: 0.5em 1em 0 1.5em
+                    min-height: 5rem
+                    border-left: 1px solid $dark-gray
+                    width: 20%
+                    text-align: left
+                    font-size: 1.125rem
+
+                    &:first-child
+                        border-left: none
+
+
+            div  p:first-child
+                color: $dark-gray
+                font-weight: 500
+                letter-spacing: 0.5px
+                font-size: 0.75rem
+                padding-bottom: 0.375em
+
+
+            div p:nth-child(2)
+                font-size: 1.125rem
+                font-weight: 500
+                
+
+            
+    
+    #map
+        transform: translateY(calc(35vh - 28rem))
+        min-height: 100vh
+        width: 100%
+
+        @include desktop
+            transform: translateY(-10vh)
+
+        @include landscape-mobile
+            transform: translateY(calc(35vh - 6rem))

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <!-- Challenge by Frontend Mentor https://www.frontendmentor.io?ref=challenge -->
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""
+    ></script>
+    <script src="./script.js" defer></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+  </head>
+  <body>
+    <header class="background">
+      <h1 class="title">IP Address Tracker</h1>
+      <form class="search">
+        <input
+          type="text"
+          class="search-box"
+          placeholder="Search for any IP address or domain"
+        />
+        <button class="search-btn">
+          <img src="./images/icon-arrow.svg" alt="search" />
+        </button>
+      </form>
+      <div class="info-box">
+        <div class="ip-address">
+          <p class="info-name">IP Address</p>
+          <p class="info">192.212.175.101</p>
+        </div>
+        <div class="location">
+          <p class="info-name">Location</p>
+          <p class="info">Brooklyn, NY 10001</p>
+        </div>
+        <div class="timezone">
+          <p class="info-name">Timezone</p>
+          <p class="info">UTC -05:00</p>
+        </div>
+        <div class="isp">
+          <p class="info-name">ISP</p>
+          <p class="info">SpaceX Starlink</p>
+        </div>
+      </div>
+    </header>
+    <main id="map"></main>
+  </body>
+</html>

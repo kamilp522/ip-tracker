@@ -3,19 +3,19 @@ let place = {
   // LOCATION API THANKS TO: https://geo.ipify.org/
   //
 
-  api_key: "at_MI3enRM1fe9SBt6KgGERvXHzVOynl",
+  //api_key: "",
 
-  fetchPlace: function (ip) {
-    fetch(
-      `https://geo.ipify.org/api/v2/country,city?apiKey=${this.api_key}${ip}`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        this.showOnMap(data);
-        this.showInformation(data);
-      })
-      .catch((error) => console.log(error));
-  },
+  // fetchPlace: function (ip) {
+  //   fetch(
+  //     `https://geo.ipify.org/api/v2/country,city?apiKey=${this.api_key}${ip}`
+  //   )
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       this.showOnMap(data);
+  //       this.showInformation(data);
+  //     })
+  //     .catch((error) => console.log(error));
+  // },
 
   showOnMap: function (data) {
     //
@@ -70,7 +70,12 @@ let place = {
   },
 };
 
-place.fetchPlace("");
+place.showOnMap({
+  location: {
+    lat: "40.64",
+    lng: "-73.96",
+  },
+});
 
 document
   .querySelector(".search-btn")

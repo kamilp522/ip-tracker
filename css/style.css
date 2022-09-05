@@ -249,4 +249,5 @@ body .api-off {
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  border-radius: 16px;
 }/*# sourceMappingURL=style.css.map */

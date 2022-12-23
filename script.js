@@ -1,21 +1,18 @@
 let place = {
-  //
   // LOCATION API THANKS TO: https://geo.ipify.org/
-  //
 
-  //api_key: "",
-
-  // fetchPlace: function (ip) {
-  //   fetch(
-  //     `https://geo.ipify.org/api/v2/country,city?apiKey=${this.api_key}${ip}`
-  //   )
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       this.showOnMap(data);
-  //       this.showInformation(data);
-  //     })
-  //     .catch((error) => console.log(error));
-  // },
+  api_key: "at_MI3enRM1fe9SBt6KgGERvXHzVOynl",
+  fetchPlace: function (ip) {
+    fetch(
+      `https://geo.ipify.org/api/v2/country,city?apiKey=${this.api_key}${ip}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        this.showOnMap(data);
+        this.showInformation(data);
+      })
+      .catch((error) => console.log(error));
+  },
 
   showOnMap: function (data) {
     //
